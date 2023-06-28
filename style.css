@@ -66,7 +66,7 @@ body {
 .weather h2 {
   font-size: 45px;
   font-weight: 400;
-  margin-top: -10px;
+  margin-top: 10px;
 }
 
 .details {
@@ -74,7 +74,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .col {
@@ -93,7 +93,7 @@ body {
   margin-top: -6px;
 }
 
-/* 検索が実行されていない初期状態 */
+/* 検索が実行されてない場合は天気情報を非表示 */
 .weather {
   display: none;
 }
