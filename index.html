@@ -90,21 +90,19 @@
         }
       }
 
-      //検索ボタンをクリックしたらcheckWeatherを実行
-      searchBtn.addEventListener("click", () => {
-        //   //   //userが入力した都市名をパス
+      const enterKey = function () {
+        // userが入力したデータをパス
         checkWeather(searchBox.value);
-      });
+      };
 
-      //エンターキーで実行ができない...
-      // // searchBtn.addEventListener("click", () => {
-      // //   checkWeather(searchBox.value);
-      // // });
-      // searchBtn.addEventListener("keypress", function (e) {
-      //   if (e.key == "Enter") {
-      //     checkWeather(searchBox.value);
-      //   }
-      // });
+      //Enterキーが押した時
+      window.addEventListener("keydown", (e) => {
+        if (e.key == "Enter") {
+          return enterKey();
+        }
+      });
+      //マウスでクリックした時
+      searchBtn.addEventListener("click", () => enterKey());
     </script>
   </body>
 </html>
